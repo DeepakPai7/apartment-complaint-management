@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PG Complaint Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Apartment & PG Complaint System</h1>
+    
+    <!-- Submission Form -->
+    <div class="card">
+      <h2>Submit Complaint</h2>
+      <div id="messageBox" class="hidden"></div>
+      <form id="complaintForm">
+        <div class="flex-row">
+          <input type="text" id="resident_name" placeholder="Name *" required>
+          <input type="text" id="room_number" placeholder="Room/Flat *" required>
+        </div>
+        <div class="flex-row">
+          <input type="text" id="contact_info" placeholder="Contact *" required>
+          <select id="category" required>
+            <option value="">Select Category *</option>
+            <option value="Electricity">Electricity</option>
+            <option value="Plumbing">Plumbing</option>
+            <option value="Internet">Internet</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="flex-row">
+          <select id="priority">
+            <option value="Low">Low Priority</option>
+            <option value="Medium" selected>Medium Priority</option>
+            <option value="High">High Priority</option>
+          </select>
+          <input type="text" id="additional_info" placeholder="Additional Info (Optional)">
+        </div>
+        <textarea id="description" placeholder="Describe the issue *" required></textarea>
+        <button type="submit">Submit Complaint</button>
+      </form>
+    </div>
+
+    <!-- Complaints List -->
+    <div class="card">
+      <h2>Recent Complaints</h2>
+      <div id="complaintsList" class="complaints-grid"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
