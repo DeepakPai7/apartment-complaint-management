@@ -102,7 +102,7 @@ Add the required Supabase environment variables:
 
 ```env
 SUPABASE_URL=your_supabase_url
-SUPABASE_KEY=your_supabase_key
+SUPABASE_ANON_KEY=your_actual_anon_key
 ```
 
 Replace the placeholder values with your own Supabase project credentials.
